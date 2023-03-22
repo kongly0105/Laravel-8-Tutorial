@@ -5,16 +5,15 @@ use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
-| Laravel 8 Tutorial - Submit HTML Form
+| Laravel 8 Tutorial - Form Validation
 |--------------------------------------------------------------------------
-|---Laravel HTML Form----
-|   Make HTML Form
-|   Make Controller
-|   Route view and Post
-|   Get Form Data
+|---Laravel Form Validation----
+|   Use Validation
+|   Show error massage
+|   Error with every field
 |   Interview Question
 |
-|---Create controller ::: php artisan make:controller UsersController :::----
+|--------------------------------------------------------------------------
 */
 
 Route::get('/', function () {
