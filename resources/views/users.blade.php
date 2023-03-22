@@ -1,2 +1,2 @@
-<h1>This is User Page</h1>
+<h1>User Page</h1>
 

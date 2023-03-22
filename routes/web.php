@@ -5,10 +5,10 @@ use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
-| Laravel 8 Tutorial - Group middleware?
+| Laravel 8 Tutorial - Route middleware
 |--------------------------------------------------------------------------
-|---Laravel Group Middleware----
-|   What is Group middleware?
+|---Laravel Route Middleware----
+|   What is Route middleware?
 |   Make Middleware
 |   Register It
 |   Apply Middleware
@@ -17,16 +17,11 @@ use App\Http\Controllers\UsersController;
 |---COMMAND ::: php artisan make:middleware checkAge------
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
-
-// Route::post("users", [UsersController::class, 'getData']);
-
+Route::view("users", "users")->middleware('protectedPage');
 Route::view("home", "home");
 Route::view("noaccess", "noaccess");
 
-Route::group(['middleware' => ['protectedPage']], function() {
-    Route::view("users", "users");
-    Route::get('/', function () {
-        return view('welcome');
-    });
-});
