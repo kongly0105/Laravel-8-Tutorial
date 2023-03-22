@@ -1,18 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Laravel 8 Tutorial - Submit HTML Form
 |--------------------------------------------------------------------------
+|---Laravel HTML Form----
+|   Make HTML Form
+|   Make Controller
+|   Route view and Post
+|   Get Form Data
+|   Interview Question
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+|---Create controller ::: php artisan make:controller UsersController :::----
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post("users", [UsersController::class, 'getData']);
+Route::view("login", "users");
