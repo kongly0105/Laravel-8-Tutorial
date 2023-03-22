@@ -5,23 +5,21 @@ use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
-| Laravel 8 Tutorial - Route middleware
+| Laravel 8 Tutorial - Database configuration and Fetch Data
 |--------------------------------------------------------------------------
-|---Laravel Route Middleware----
-|   What is Route middleware?
-|   Make Middleware
-|   Register It
-|   Apply Middleware
+|---Laravel Start with DB----
+|   Config database
+|   Checkout Database
+|   Import DB Class
+|   Fetch Data from mysql
 |   Interview Question
 |
-|---COMMAND ::: php artisan make:middleware checkAge------
+|---COMMAND ::: php artisan make:------
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view("users", "users")->middleware('protectedPage');
-Route::view("home", "home");
-Route::view("noaccess", "noaccess");
+Route::get('users', [UsersController::class, 'index']);
 
