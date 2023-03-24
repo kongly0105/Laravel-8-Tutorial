@@ -5,21 +5,21 @@ use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
-| Laravel 8 Tutorial - Database configuration and Fetch Data
+| Laravel 8 Tutorial - Model
 |--------------------------------------------------------------------------
-|---Laravel Start with DB----
-|   Config database
-|   Checkout Database
-|   Import DB Class
-|   Fetch Data from mysql
+|---Laravel Model with DB----
+|   What is model
+|   Make Model
+|   Fetch Data from Model
+|   Show Data
 |   Interview Question
 |
-|---COMMAND ::: php artisan make:------
+|---COMMAND ::: php artisan migrate------
+|---COMMAND ::: php artisan make:model UserModel------
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users', [UsersController::class, 'index']);
-
+Route::get('users', [UsersController::class, 'getData']);

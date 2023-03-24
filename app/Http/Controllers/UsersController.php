@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\UserModel;
 class UsersController extends Controller
 {
-    function index() {
-        // echo "Hello from user controller";
-
-        return DB::select("select * from users");
+    function getData()
+    {
+       return UserModel::all();
     }
 }
